@@ -8,15 +8,15 @@ const headingStyles = {
 	maxWidth: 320,
 }
 
-const pageStyles = {
-	color: '#232129',
-	padding: 96,
-	fontFamily: '-apple-system, Roboto, sans-serif, serif',
-}
+// const pageStyles = {
+// 	color: '#232129',
+// 	padding: 96,
+// 	fontFamily: '-apple-system, Roboto, sans-serif, serif',
+// }
 
 export default function Home() {
   return (
-    <div className="App" style={pageStyles}>
+
 		<div style={{ marginLeft: '45%' }}>
 			<h1 style={headingStyles}>
 				<HelloComponent />
@@ -24,6 +24,6 @@ export default function Home() {
 			</h1>
       <h5>I'm Juli. Welcome to my page.</h5>
 		</div>
-    </div>
+
   )
 }

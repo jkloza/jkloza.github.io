@@ -10,7 +10,7 @@ export function NavMenu() {
     {label: 'Resume', link: '/resume'}
   ]
   return (
-    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
     {pages.map((page) => (
       <Link key={page.label} to={page.link} style={{ textDecoration: 'none' }}>
       <MenuButton

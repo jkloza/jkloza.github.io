@@ -18,6 +18,16 @@ export const theme = createTheme({
       defaultProps: {
         color: 'default',
       }
-    }
+    },
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: 'menu' },
+          style: {
+            textTransform: 'none',
+            color: 'default',
+          },
+        },
+      ]},
   }
 })

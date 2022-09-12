@@ -1,10 +1,12 @@
 import React from 'react'
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 
 export function MenuButton({ title, onClick }) {
   return (
-    <Button onClick={onClick}>
+    <Button variant="menu" onClick={onClick}>
+      <Typography>
       {title}
+      </Typography>
     </Button>
   )
 }
