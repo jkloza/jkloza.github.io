@@ -1,6 +1,7 @@
+import { Typography } from '@mui/material'
 import React from 'react'
 import { getHello } from '../utils'
 
 export default function HelloComponent() {
-	return <div>{getHello()}</div>
+	return <Typography variant="h2">{getHello()}!</Typography>
 }

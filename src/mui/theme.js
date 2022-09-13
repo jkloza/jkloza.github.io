@@ -25,7 +25,7 @@ export const theme = createTheme({
           props: { variant: 'menu' },
           style: {
             textTransform: 'none',
-            color: 'default',
+            color: 'secondary',
           },
         },
       ]},
