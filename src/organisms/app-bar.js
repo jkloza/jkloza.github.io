@@ -6,8 +6,8 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar>
+      <Container maxWidth="xl" sx={{backgroundColor: 'white'}}>
+        <Toolbar sx={{backgroundColor: 'white'}}>
           <NavMenu />
         </Toolbar>
       </Container>
