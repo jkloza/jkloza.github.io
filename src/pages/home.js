@@ -3,6 +3,8 @@ import HelloComponent from '../molecules/Hellos'
 import { Typography, Grid } from '@mui/material'
 import OrangeCircle from '../assets/orange-circle'
 import ClickableCard from '../molecules/ClickableCard'
+import juli from '../assets/juli-transparent.png'
+import './home.css'
 
 // Styles
 const headingStyles = {
@@ -21,10 +23,10 @@ const headingStyles = {
 export default function Home() {
   const cardContent = 'This is a sample of the main text that will go in this box. If you click the box, it will flip around and say something else, like a secret little joke.'
   return (
-		<Grid container justifyContent="center" style={{ height: 630, background: 'linear-gradient(180deg, white 50%, #F4D06F 50%)' }}>
+    <>
     <Grid container justifyContent="center" item xs={5} style={{ marginTop: '2%' }}>
+      <img src={juli} alt="headshot of juli" height={200} width={200} style={{position: 'absolute'}} />
       <OrangeCircle>
-        
       </OrangeCircle>
     </Grid>
     <Grid item xs={7}>
@@ -41,7 +43,6 @@ export default function Home() {
       </Grid>
     </Grid>
     </Grid>
-		</Grid>
-
+</>
   )
 }
