@@ -2,7 +2,7 @@ import Timeline from '@mui/lab/Timeline';
 import TimelineSection from '../molecules/timeline-section';
 import ClickableCard from '../molecules/ClickableCard';
 
-export default function About() {
+export default function Timeline() {
   return (
     <Timeline position="alternate">
       <TimelineSection>

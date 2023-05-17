@@ -1,3 +1,24 @@
+import { Grid, Typography } from '@mui/material';
+import PortfolioCarousel from '../organisms/portfolio-carousel';
+
 export default function Portfolio() {
-  return <h2>Portfolio</h2>;
+  return (
+    <Grid
+      container
+      style={{
+        height: 660,
+        background: '#F4D06F'
+      }}>
+      <Grid item>
+        <Typography variant="h4" sx={{ fontWeight: 700 }}>
+          work
+        </Typography>
+      </Grid>
+      <Grid container item>
+        <Grid item>
+          <PortfolioCarousel />
+        </Grid>
+      </Grid>
+    </Grid>
+  );
 }
