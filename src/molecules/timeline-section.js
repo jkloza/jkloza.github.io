@@ -1,10 +1,10 @@
-import React from "react";
-import TimelineItem from "@mui/lab/TimelineItem";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
-import TimelineContent from "@mui/lab/TimelineContent";
-import TimelineDot from "@mui/lab/TimelineDot";
-import { ORANGE } from "../utils/constants";
+import { PropTypes } from 'prop-types';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import { ORANGE } from '../utils/constants';
 
 export default function TimelineSection({ content }) {
   return (
@@ -17,3 +17,7 @@ export default function TimelineSection({ content }) {
     </TimelineItem>
   );
 }
+
+TimelineSection.propTypes = {
+  content: PropTypes.any
+};

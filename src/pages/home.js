@@ -1,16 +1,15 @@
-import React from "react";
-import HelloComponent from "../molecules/Hellos";
-import { Typography, Grid } from "@mui/material";
-import OrangeCircle from "../assets/orange-circle";
-import ClickableCard from "../molecules/ClickableCard";
-import juli from "../assets/juli-transparent.png";
-import "./home.css";
+import HelloComponent from '../molecules/Hellos';
+import { Typography, Grid } from '@mui/material';
+import OrangeCircle from '../assets/orange-circle';
+import ClickableCard from '../molecules/ClickableCard';
+import juli from '../assets/juli-transparent.png';
+import './home.css';
 
 // Styles
 const headingStyles = {
-  marginTop: "10%",
+  marginTop: '10%',
   marginBottom: 30,
-  maxWidth: 320,
+  maxWidth: 320
 };
 
 // const pageStyles = {
@@ -22,22 +21,16 @@ const headingStyles = {
 // TODO: Get actual height of page and not a guess!
 export default function Home() {
   const cardContent =
-    "This is a sample of the main text that will go in this box. If you click the box, it will flip around and say something else, like a secret little joke.";
+    'This is a sample of the main text that will go in this box. If you click the box, it will flip around and say something else, like a secret little joke.';
   return (
     <>
-      <Grid
-        container
-        justifyContent="center"
-        item
-        xs={5}
-        style={{ marginTop: "2%" }}
-      >
+      <Grid container justifyContent="center" item xs={5} style={{ marginTop: '2%' }}>
         <img
           src={juli}
           alt="headshot of juli"
           height={200}
           width={200}
-          style={{ position: "absolute" }}
+          style={{ position: 'absolute' }}
         />
         <OrangeCircle></OrangeCircle>
       </Grid>
@@ -45,7 +38,7 @@ export default function Home() {
         <div style={headingStyles}>
           <HelloComponent />
         </div>
-        <Typography variant="h5">I'm Juli. Welcome to my page!</Typography>
+        <Typography variant="h5">Im Juli. Welcome to my page!</Typography>
         <br />
         <br />
         <Grid container>

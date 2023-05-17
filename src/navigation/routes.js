@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-import { About, Home, Resume, Portfolio } from "../pages";
+import { Routes, Route } from 'react-router-dom';
+import { About, Home, Resume, Portfolio } from '../pages';
 
 export function PageRoutes() {
   return (

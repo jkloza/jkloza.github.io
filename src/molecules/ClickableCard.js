@@ -1,6 +1,6 @@
-import React from "react";
-import { Typography, Card, CardActionArea, CardContent } from "@mui/material";
-import { theme } from "../mui/theme";
+import { PropTypes } from 'prop-types';
+import { Typography, Card, CardActionArea, CardContent } from '@mui/material';
+import { theme } from '../mui/theme';
 
 // Styles
 // const headingStyles = {
@@ -28,3 +28,8 @@ export default function ClickableCard({ content, styles = {} }) {
     </Card>
   );
 }
+
+ClickableCard.propTypes = {
+  content: PropTypes.string,
+  styles: PropTypes.object
+};

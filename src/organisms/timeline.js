@@ -1,7 +1,6 @@
-import React from "react";
-import Timeline from "@mui/lab/Timeline";
-import TimelineSection from "../molecules/timeline-section";
-import ClickableCard from "../molecules/ClickableCard";
+import Timeline from '@mui/lab/Timeline';
+import TimelineSection from '../molecules/timeline-section';
+import ClickableCard from '../molecules/ClickableCard';
 
 export default function About() {
   return (
