@@ -1,23 +1,26 @@
-import React from 'react'
-import {Box} from '@mui/material'
-import { MenuButton } from '../atoms/menu-button'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Box, Tabs, Tab } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export function NavMenu() {
   const pages = [
-    {label: 'Home', link: '/'},
-    {label: 'About', link: '/about'},
-    {label: 'Resume', link: '/resume'}
-  ]
+    { label: "Home", link: "/" },
+    { label: "About", link: "/about" },
+    { label: "Resume", link: "/resume" },
+    { label: "Portfolio", link: "/portfolio" },
+  ];
+  const [value, setValue] = React.useState(0);
+  const handleTabChange = (e, newVal) => setValue(newVal);
+
   return (
-    <Box sx={{ display: { xs: 'none', sm: 'block' }, backgroundColor: 'inherit' }}>
-    {pages.map((page) => (
-      <Link key={page.label} to={page.link} style={{ textDecoration: 'none' }}>
-      <MenuButton
-        title={page.label}
-      />
-      </Link>
-    ))}
-  </Box>
-  )
+    <Box
+      sx={{ display: { xs: "none", sm: "block" }, backgroundColor: "inherit" }}
+    >
+      <Tabs value={value} onChange={handleTabChange}>
+        {pages.map((page) => (
+          <Tab label={page.label} to={page.link} component={Link} />
+        ))}
+      </Tabs>
+    </Box>
+  );
 }

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Typography, Card, CardActionArea, CardContent } from '@mui/material'
-import { theme } from '../mui/theme'
+import React from "react";
+import { Typography, Card, CardActionArea, CardContent } from "@mui/material";
+import { theme } from "../mui/theme";
 
 // Styles
 // const headingStyles = {
@@ -15,16 +15,16 @@ import { theme } from '../mui/theme'
 // 	fontFamily: '-apple-system, Roboto, sans-serif, serif',
 // }
 
-export default function ClickableCard({content, styles = {}}) {
+export default function ClickableCard({ content, styles = {} }) {
   return (
-      <Card sx={{...styles, backgroundColor: theme.palette.primary.main}}>
+    <Card sx={{ ...styles, backgroundColor: theme.palette.primary.main }}>
       <CardActionArea>
         <CardContent>
-          <Typography variant="body2" color='white'>
+          <Typography variant="body2" color="white">
             {content}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
-  )
+  );
 }
