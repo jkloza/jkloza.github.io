@@ -2,14 +2,13 @@ import HelloComponent from '../molecules/Hellos';
 import { Typography, Grid } from '@mui/material';
 import OrangeCircle from '../assets/orange-circle';
 import ClickableCard from '../molecules/ClickableCard';
-import juli from '../assets/juli-transparent.png';
+import juli from '../assets/juli-1.png';
 import './home.css';
 
 // Styles
 const headingStyles = {
   marginTop: '10%',
-  marginBottom: 30,
-  maxWidth: 320
+  marginBottom: 30
 };
 
 // TODO: Get actual height of page and not a guess!
@@ -39,7 +38,11 @@ export default function Home() {
           <HelloComponent />
         </div>
         <Typography variant="h5">
-          I’m Juli, a full-stack software engineer located in Boston, Massachusetts.{' '}
+          I’m Juli, a{' '}
+          <Typography component="span" variant="h5" sx={{ fontWeight: 700 }} color="secondary">
+            full-stack developer
+          </Typography>{' '}
+          located in Boston, Massachusetts.{' '}
         </Typography>
         <br />
         <br />

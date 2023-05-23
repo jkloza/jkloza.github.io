@@ -2,12 +2,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import ResponsiveAppBar from './organisms/app-bar';
 import { PageRoutes } from './navigation/routes';
 import { ThemeProvider } from '@mui/material';
-import { theme } from './mui/theme';
+import { darkTheme } from './mui/theme';
 import { Grid } from '@mui/material';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
       <Router>
         <div>
           <nav>
@@ -19,7 +19,7 @@ function App() {
             justifyContent="center"
             style={{
               height: 760,
-              background: 'linear-gradient(180deg, white 50%, #F4D06F 50%)'
+              background: '#111D4A'
             }}>
             <PageRoutes />
           </Grid>
