@@ -9,7 +9,7 @@ export default function Portfolio() {
         height: 660,
         background: '#F4D06F'
       }}>
-      <Grid item>
+      <Grid item sx={{ marginLeft: 10, marginTop: 10 }}>
         <Typography variant="h4" sx={{ fontWeight: 700 }}>
           work
         </Typography>

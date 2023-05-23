@@ -1,4 +1,4 @@
-export const ORANGE = '#FC7300';
+export const ORANGE = '#D5573B';
 export const BLUE = '#98D8AA';
 export const YELLOW = '#F3E99F';
 // export const ORANGE = '#D5573B'

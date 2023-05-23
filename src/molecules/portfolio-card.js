@@ -1,9 +1,9 @@
 import { PropTypes } from 'prop-types';
 import { Chip, Typography, Button, Card, CardActions, CardContent, CardMedia } from '@mui/material';
 
-export default function PortfolioCard({ title, description, tags }) {
+export default function PortfolioCard({ id, title, description, tags, onClick }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, backgroundColor: 'rgba(255, 255, 255, 0.75)' }}>
       <CardMedia
         sx={{ height: 180 }}
         image="/static/images/cards/contemplative-reptile.jpg"
@@ -22,15 +22,19 @@ export default function PortfolioCard({ title, description, tags }) {
           })}
       </CardContent>
       <CardActions>
-        <Button variant="contained">Preview</Button>
-        <Button>Github</Button>
+        <Button variant="contained" onClick={() => onClick(id)}>
+          More Info
+        </Button>
+        <Button>Try it!</Button>
       </CardActions>
     </Card>
   );
 }
 
 PortfolioCard.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  tags: PropTypes.array
+  tags: PropTypes.array,
+  onClick: PropTypes.func
 };

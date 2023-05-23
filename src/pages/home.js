@@ -12,33 +12,35 @@ const headingStyles = {
   maxWidth: 320
 };
 
-// const pageStyles = {
-// 	color: '#232129',
-// 	padding: 96,
-// 	fontFamily: '-apple-system, Roboto, sans-serif, serif',
-// }
-
 // TODO: Get actual height of page and not a guess!
 export default function Home() {
   const cardContent =
     'This is a sample of the main text that will go in this box. If you click the box, it will flip around and say something else, like a secret little joke.';
   return (
     <>
-      <Grid container justifyContent="center" item xs={5} style={{ marginTop: '2%' }}>
-        <img
-          src={juli}
-          alt="headshot of juli"
-          height={200}
-          width={200}
-          style={{ position: 'absolute' }}
-        />
-        <OrangeCircle></OrangeCircle>
+      <Grid container justifyContent="center" item xs={6} style={{ marginTop: '2%' }}>
+        <Grid item xs={8}>
+          <OrangeCircle height={100} width={100} />
+          <img
+            src={juli}
+            alt="headshot of juli"
+            height={350}
+            width={350}
+            style={{ position: 'absolute' }}
+          />
+          <OrangeCircle />
+        </Grid>
+        <Grid item xs={12} style={{ marginLeft: 100 }}>
+          <OrangeCircle height={200} width={200} />
+        </Grid>
       </Grid>
-      <Grid item xs={7}>
+      <Grid item xs={6}>
         <div style={headingStyles}>
           <HelloComponent />
         </div>
-        <Typography variant="h5">Im Juli. Welcome to my page!</Typography>
+        <Typography variant="h5">
+          I’m Juli, a full-stack software engineer located in Boston, Massachusetts.{' '}
+        </Typography>
         <br />
         <br />
         <Grid container>

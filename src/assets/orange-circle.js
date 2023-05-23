@@ -1,10 +1,11 @@
 import { ORANGE } from '../utils/constants';
+import PropTypes from 'prop-types';
 
-export default function OrangeCircle() {
+export default function OrangeCircle({ height = 340, width = 340 }) {
   return (
     <svg
-      width="228"
-      height="224"
+      width={height}
+      height={width}
       viewBox="0 0 328 324"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -16,3 +17,8 @@ export default function OrangeCircle() {
     </svg>
   );
 }
+
+OrangeCircle.propTypes = {
+  height: PropTypes.string,
+  width: PropTypes.string
+};

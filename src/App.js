@@ -1,5 +1,4 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
 import ResponsiveAppBar from './organisms/app-bar';
 import { PageRoutes } from './navigation/routes';
 import { ThemeProvider } from '@mui/material';
@@ -19,7 +18,7 @@ function App() {
             container
             justifyContent="center"
             style={{
-              height: 660,
+              height: 760,
               background: 'linear-gradient(180deg, white 50%, #F4D06F 50%)'
             }}>
             <PageRoutes />
