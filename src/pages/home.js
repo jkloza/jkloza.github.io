@@ -1,9 +1,11 @@
-import HelloComponent from '../molecules/Hellos';
+import { useContext } from 'react';
+import { ThemeModeContext } from '../context';
+import HelloComponent from '../molecules/hellos';
 import { Typography, Grid } from '@mui/material';
 import OrangeCircle from '../assets/orange-circle';
-import ClickableCard from '../molecules/ClickableCard';
+import ClickableCard from '../molecules/clickable-card';
 import juli from '../assets/juli-1.png';
-import './home.css';
+import juliFun from '../assets/juli-fun.png';
 
 // Styles
 const headingStyles = {
@@ -13,6 +15,8 @@ const headingStyles = {
 
 // TODO: Get actual height of page and not a guess!
 export default function Home() {
+  const { mode } = useContext(ThemeModeContext);
+  const lightMode = mode === 'light';
   const cardContent =
     'This is a sample of the main text that will go in this box. If you click the box, it will flip around and say something else, like a secret little joke.';
   return (
@@ -21,7 +25,7 @@ export default function Home() {
         <Grid item xs={8}>
           <OrangeCircle height={100} width={100} />
           <img
-            src={juli}
+            src={lightMode ? juliFun : juli}
             alt="headshot of juli"
             height={350}
             width={350}

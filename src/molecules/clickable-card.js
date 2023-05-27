@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import { Typography, Card, CardActionArea, CardContent } from '@mui/material';
-import { theme } from '../mui/theme';
+// import { theme } from '../mui/theme';
 
 // Styles
 // const headingStyles = {
@@ -17,7 +17,7 @@ import { theme } from '../mui/theme';
 
 export default function ClickableCard({ content, styles = {} }) {
   return (
-    <Card sx={{ ...styles, backgroundColor: theme.palette.primary.main }}>
+    <Card sx={{ ...styles }}>
       <CardActionArea>
         <CardContent>
           <Typography variant="body2" color="white">

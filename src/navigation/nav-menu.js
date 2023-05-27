@@ -13,10 +13,21 @@ export function NavMenu() {
   const handleTabChange = (e, newVal) => setValue(newVal);
 
   return (
-    <Box sx={{ display: { xs: 'none', sm: 'block' }, backgroundColor: '#111D4A' }}>
+    <Box sx={{ display: { xs: 'none', sm: 'block' }, backgroundColor: 'theme.primary' }}>
       <Tabs value={value} onChange={handleTabChange}>
         {pages.map((page) => (
-          <Tab label={page.label} to={page.link} component={Link} key={page.link} />
+          <Tab
+            label={page.label}
+            to={page.link}
+            component={Link}
+            key={page.link}
+            sx={{
+              '&:hover': {
+                color: '#40a9ff',
+                opacity: 1
+              }
+            }}
+          />
         ))}
       </Tabs>
     </Box>

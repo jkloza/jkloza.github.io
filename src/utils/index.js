@@ -1,4 +1,4 @@
-const HELLOS = ['Bonjour', 'Kia Ora', 'Howdy', 'Hey there', 'Hola', 'Ciao'];
+import { HELLOS } from '../data';
 
 export const getHello = () => {
   // Generate random number between 0 and length of HELLOS
