@@ -75,7 +75,6 @@ const IOSSwitch = styled((props) => (
 }));
 
 const LightDarkToggle = () => {
-  const theme = useTheme();
   const { colorMode } = useContext(ThemeModeContext);
   return (
     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>

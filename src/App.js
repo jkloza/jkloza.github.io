@@ -45,7 +45,6 @@ function App() {
 
   // Update the theme only if the mode changes
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
-  console.log(theme);
 
   return (
     <ThemeModeContext.Provider value={{ colorMode, mode }}>
@@ -55,7 +54,6 @@ function App() {
             <nav>
               <ResponsiveAppBar />
             </nav>
-            <MyApp />
             <Grid
               container
               justifyContent="center"
