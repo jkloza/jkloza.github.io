@@ -17,26 +17,23 @@ const headingStyles = {
 export default function Home() {
   const { mode } = useContext(ThemeModeContext);
   const lightMode = mode === 'light';
-  const cardContent =
-    'This is a sample of the main text that will go in this box. If you click the box, it will flip around and say something else, like a secret little joke.';
+
   return (
-    <>
-      <Grid container justifyContent="center" item xs={6} style={{ marginTop: '2%' }}>
-        <Grid item xs={8}>
-          <OrangeCircle height={100} width={100} />
-          <img
-            src={lightMode ? juliFun : juli}
-            alt="headshot of juli"
-            height={350}
-            width={350}
-            style={{ position: 'absolute' }}
-          />
-          <OrangeCircle />
-        </Grid>
-        <Grid item xs={12} style={{ marginLeft: 100 }}>
-          <OrangeCircle height={200} width={200} />
-        </Grid>
+    <Grid container justifyContent="center" item xs={12} style={{ marginTop: '2%' }}>
+      <Grid item xs={6}>
+        {/* <OrangeCircle height={100} width={100} /> */}
+        <img
+          src={lightMode ? juliFun : juli}
+          alt="headshot of juli"
+          height={350}
+          width={350}
+          style={{ position: 'absolute' }}
+        />
+        {/* <OrangeCircle /> */}
       </Grid>
+      {/* <Grid item xs={12} style={{ marginLeft: 100 }}>
+          <OrangeCircle height={200} width={200} />
+        </Grid> */}
       <Grid item xs={6}>
         <div style={headingStyles}>
           <HelloComponent />
@@ -50,13 +47,7 @@ export default function Home() {
         </Typography>
         <br />
         <br />
-        <Grid container>
-          <Grid item xs={2}></Grid>
-          <Grid item xs={8}>
-            <ClickableCard content={cardContent} styles={{ maxWidth: 345 }} />
-          </Grid>
-        </Grid>
       </Grid>
-    </>
+    </Grid>
   );
 }

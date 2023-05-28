@@ -1,30 +1,7 @@
 import { useContext } from 'react';
-import { Switch, Box, useTheme } from '@mui/material';
+import { Switch, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ThemeModeContext } from '../context';
-
-// function MyApp() {
-//   const theme = useTheme();
-//   const { colorMode } = useContext(ThemeModeContext);
-//   return (
-//     <Box
-//       sx={{
-//         display: 'flex',
-//         width: '100%',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//         bgcolor: 'background.default',
-//         color: 'text.primary',
-//         borderRadius: 1,
-//         p: 3
-//       }}>
-//       {theme.palette.mode} mode
-//       <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-//         {theme.palette.mode === 'dark' ? 'dark' : 'light'}
-//       </IconButton>
-//     </Box>
-//   );
-// }
 
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -39,6 +16,9 @@ const IOSSwitch = styled((props) => (
     '&.Mui-checked': {
       transform: 'translateX(16px)',
       color: '#fff',
+      '& .MuiSwitch-thumb:before': {
+        content: "'🌙'"
+      },
       '& + .MuiSwitch-track': {
         backgroundColor: 'background.primary',
         opacity: 1,
@@ -62,11 +42,14 @@ const IOSSwitch = styled((props) => (
   '& .MuiSwitch-thumb': {
     boxSizing: 'border-box',
     width: 22,
-    height: 22
+    height: 22,
+    '&:after': {
+      content: "'🔆'"
+    }
   },
   '& .MuiSwitch-track': {
     borderRadius: 26 / 2,
-    backgroundColor: 'background.primary',
+    backgroundColor: theme.palette.mode === 'light' ? '#007FFF' : '#8789C0',
     opacity: 1,
     transition: theme.transitions.create(['background-color'], {
       duration: 500
