@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default function OrangeCircle({ height = 340, width = 340 }) {
+export default function BlurryCircle({ height = 340, width = 340 }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function OrangeCircle({ height = 340, width = 340 }) {
   );
 }
 
-OrangeCircle.propTypes = {
+BlurryCircle.propTypes = {
   height: PropTypes.string,
   width: PropTypes.string
 };

@@ -1,9 +1,7 @@
 import { useContext } from 'react';
 import { ThemeModeContext } from '../context';
 import HelloComponent from '../molecules/hellos';
-import { Typography, Grid } from '@mui/material';
-import OrangeCircle from '../assets/orange-circle';
-import ClickableCard from '../molecules/clickable-card';
+import { Typography, Grid, Divider } from '@mui/material';
 import juli from '../assets/juli-1.png';
 import juliFun from '../assets/juli-fun.png';
 
@@ -19,35 +17,25 @@ export default function Home() {
   const lightMode = mode === 'light';
 
   return (
-    <Grid container justifyContent="center" item xs={12} style={{ marginTop: '2%' }}>
-      <Grid item xs={6}>
-        {/* <OrangeCircle height={100} width={100} /> */}
-        <img
-          src={lightMode ? juliFun : juli}
-          alt="headshot of juli"
-          height={350}
-          width={350}
-          style={{ position: 'absolute' }}
-        />
-        {/* <OrangeCircle /> */}
+    <Grid container justifyContent="center" style={{ marginTop: '2%' }}>
+      <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
+        <img src={lightMode ? juliFun : juli} alt="headshot of juli" height={350} width={350} />
       </Grid>
-      {/* <Grid item xs={12} style={{ marginLeft: 100 }}>
-          <OrangeCircle height={200} width={200} />
-        </Grid> */}
-      <Grid item xs={6}>
+      <Grid item xs={6} md={4}>
         <div style={headingStyles}>
           <HelloComponent />
         </div>
-        <Typography variant="h5">
+        <Typography variant="h5" color="text.primary" sx={{ fontWeight: 700 }}>
           I’m Juli, a{' '}
-          <Typography component="span" variant="h5" sx={{ fontWeight: 700 }} color="secondary">
+          <Typography component="span" variant="h5" sx={{ fontWeight: 700 }} color="primary">
             full-stack developer
           </Typography>{' '}
-          located in Boston, Massachusetts.{' '}
+          located in Boston, Massachusetts. Welcome to my page!{' '}
         </Typography>
         <br />
-        <br />
+        <Divider sx={{ borderBottomWidth: 2 }} />
       </Grid>
+      <Grid item xs={0} md={2}></Grid>
     </Grid>
   );
 }

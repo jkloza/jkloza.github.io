@@ -6,7 +6,6 @@ export function NavMenu() {
   const pages = [
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about' },
-    { label: 'Resume', link: '/resume' },
     { label: 'Portfolio', link: '/portfolio' }
   ];
   const [value, setValue] = useState(0);

@@ -20,7 +20,7 @@ export default function PortfolioCarousel() {
       <Grid container sx={{ marginLeft: 10 }} spacing={10}>
         {projects.map((project) => {
           return (
-            <Grid item key={project.title}>
+            <Grid item key={project.title} xs={10}>
               <PortfolioCard
                 id={project.id}
                 title={project.title}

@@ -33,7 +33,7 @@ export const getDesignTokens = (mode) => ({
           primary: {
             main: '#007FFF'
           },
-          divider: 'rgba(0, 0, 0, 0.12)',
+          divider: '#007FFF',
           text: {
             primary: '#111D4A',
             secondary: 'rgba(0, 0, 0, 0.87)'
@@ -53,7 +53,7 @@ export const getDesignTokens = (mode) => ({
           primary: {
             main: '#8789C0'
           },
-          divider: 'rgba(0, 0, 0, 0.12)',
+          divider: '#007FFF',
           background: {
             default: '#111D4A',
             paper: '#f9f9f9'
