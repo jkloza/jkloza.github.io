@@ -1,4 +1,15 @@
 import { projects } from './portfolio';
-const HELLOS = ['Bonjour', 'Kia Ora', 'Howdy', 'Hey there', 'Hola', 'Ciao'];
+const HELLOS = [
+  'bonjour',
+  'kia ora',
+  'howdy',
+  'hey there',
+  'hola',
+  'ciao',
+  'heyyy',
+  'welcome',
+  'hi',
+  'greetings'
+];
 
 export { projects, HELLOS };

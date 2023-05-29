@@ -1,50 +1,53 @@
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import ClickableCard from '../molecules/clickable-card';
-import { ORANGE } from '../utils/constants';
+import { useContext } from 'react';
+import { ThemeModeContext } from '../context';
+import { Typography, Grid, Divider } from '@mui/material';
+import juli from '../assets/juli-1.png';
+import juliFun from '../assets/juli-fun.png';
 
+// Styles
+const headingStyles = {
+  marginTop: '10%',
+  marginBottom: 30
+};
+
+// TODO: Get actual height of page and not a guess!
 export default function About() {
+  const { mode } = useContext(ThemeModeContext);
+  const lightMode = mode === 'light';
+
   return (
-    <Timeline position="alternate">
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector sx={{ bgcolor: ORANGE }} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <ClickableCard content="Eat" />
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector sx={{ bgcolor: ORANGE }} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <ClickableCard content="Code" />
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector sx={{ bgcolor: ORANGE }} />
-        </TimelineSeparator>
-        <TimelineContent>
-          <ClickableCard content="Sleep" />
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-        </TimelineSeparator>
-        <TimelineContent>
-          <ClickableCard content="Repeat" />
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
+    <Grid container justifyContent="center" style={{ marginTop: '2%' }}>
+      <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
+        <img src={lightMode ? juliFun : juli} alt="headshot of juli" height={350} width={350} />
+      </Grid>
+      <Grid item xs={6} md={4}>
+        <div style={headingStyles}>
+          <Typography variant="h2" color="primary" sx={{ fontWeight: 700 }}>
+            it’s me! hi! 🤸‍♀️
+          </Typography>
+        </div>
+        <ul>
+          <li>
+            <Typography variant="h5" color="text.primary" sx={{ fontWeight: 700 }}>
+              software engineer at freight farms
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="h5" color="text.primary" sx={{ fontWeight: 700 }}>
+              graduated from northeastern university in 2019 with a degree in computer engineering
+            </Typography>
+          </li>
+          <li>
+            <Typography variant="h5" color="text.primary" sx={{ fontWeight: 700 }}>
+              self-proclaimed hobby girlie. i am a dabbler. hobbies i’ve started over the years:
+              gardening, reading, hiking, knitting, sourdough, ukelele
+            </Typography>
+          </li>
+        </ul>
+        <br />
+        <Divider sx={{ borderBottomWidth: 2 }} />
+      </Grid>
+      <Grid item xs={0} md={2}></Grid>
+    </Grid>
   );
 }

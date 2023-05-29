@@ -26,11 +26,11 @@ export default function Home() {
           <HelloComponent />
         </div>
         <Typography variant="h5" color="text.primary" sx={{ fontWeight: 700 }}>
-          I’m Juli, a{' '}
+          i’m juli, a{' '}
           <Typography component="span" variant="h5" sx={{ fontWeight: 700 }} color="primary">
             full-stack developer
           </Typography>{' '}
-          located in Boston, Massachusetts. Welcome to my page!{' '}
+          located in boston, massachusetts. welcome to my page!{' '}
         </Typography>
         <br />
         <Divider sx={{ borderBottomWidth: 2 }} />
