@@ -69,6 +69,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+## to do:
+1. update readme
+2. fix color background
+3. fix tab routing (refresh + responsive issue)
+4. portfolio cards + modals
+
 ## give credit to:
 - hand emoji : https://codepen.io/jakejarvis/pen/pBZWZw
 - inspirations: https://braydentw.io/ , https://brittanychiang.com/#projects (no where near as good as these but helped to ideate!)
