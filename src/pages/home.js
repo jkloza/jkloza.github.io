@@ -1,25 +1,20 @@
-import { useContext } from 'react';
-import { ThemeModeContext } from '../context';
 import HelloComponent from '../molecules/hellos';
-import { Typography, Grid, Divider } from '@mui/material';
-import juli from '../assets/juli-1.png';
-import juliFun from '../assets/juli-fun.png';
+import ProfileImageContainer from '../organisms/profile-image-container';
+import { Typography, Grid } from '@mui/material';
+import { ThickDivider } from '../atoms/divider';
 
 // Styles
 const headingStyles = {
-  marginTop: '10%',
+  marginTop: '25%',
   marginBottom: 30
 };
 
 // TODO: Get actual height of page and not a guess!
 export default function Home() {
-  const { mode } = useContext(ThemeModeContext);
-  const lightMode = mode === 'light';
-
   return (
     <Grid container justifyContent="center" style={{ marginTop: '2%' }}>
       <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
-        <img src={lightMode ? juliFun : juli} alt="headshot of juli" height={350} width={350} />
+        <ProfileImageContainer />
       </Grid>
       <Grid item xs={6} md={4}>
         <div style={headingStyles}>
@@ -33,7 +28,7 @@ export default function Home() {
           located in boston, massachusetts. welcome to my page!{' '}
         </Typography>
         <br />
-        <Divider sx={{ borderBottomWidth: 2 }} />
+        <ThickDivider />
       </Grid>
       <Grid item xs={0} md={2}></Grid>
     </Grid>
