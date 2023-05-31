@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { projects } from '../data/portfolio';
-import PortfolioCard2 from '../molecules/portfolio-card-2';
+import PortfolioCard from '../molecules/portfolio-card';
 import { Grid } from '@mui/material';
 import ProjectModal from './project-modal';
+import './portfolio.css';
 
 export default function PortfolioCarousel() {
   const [openProject, setOpenProject] = useState(false);
@@ -17,11 +18,11 @@ export default function PortfolioCarousel() {
   };
   return (
     <>
-      <Grid container direction="column" spacing={3}>
+      <Grid container spacing={2} className="radio-btns">
         {projects.map((project) => {
           const { id, title, description, tags, preview } = project;
           return (
-            <PortfolioCard2
+            <PortfolioCard
               id={id}
               title={title}
               key={title}
@@ -36,24 +37,4 @@ export default function PortfolioCarousel() {
       {openProject && <ProjectModal project={project} handleClose={handleCloseProject} />}
     </>
   );
-  // return (
-  //   <>
-  //     <Grid container sx={{ marginLeft: 10 }} spacing={10}>
-  //       {projects.map((project) => {
-  //         return (
-  //           <Grid item key={project.title} xs={10}>
-  //             <PortfolioCard2
-  //               id={project.id}
-  //               title={project.title}
-  //               description={project.description}
-  //               tags={project.tags}
-  //               onClick={handleOpenProject}
-  //             />
-  //           </Grid>
-  //         );
-  //       })}
-  //     </Grid>
-  //     {openProject && <ProjectModal project={project} handleClose={handleCloseProject} />}
-  //   </>
-  // );
 }
