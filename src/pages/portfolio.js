@@ -1,5 +1,6 @@
-import { Grid, Typography, Divider } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import PortfolioCarousel from '../organisms/portfolio-carousel';
+import { ThickDivider } from '../atoms/divider';
 
 // TODO: Get actual height of page and not a guess!
 export default function Portfolio() {
@@ -10,10 +11,10 @@ export default function Portfolio() {
           my work ✏️
         </Typography>
       </Grid>
-      <Grid item xs={6} md={6}>
+      <Grid item xs={12} md={8}>
         <PortfolioCarousel />
         <br />
-        <Divider sx={{ borderBottomWidth: 2 }} />
+        <ThickDivider />
       </Grid>
       <Grid item xs={0} md={2}></Grid>
     </Grid>

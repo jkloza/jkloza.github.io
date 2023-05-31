@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import { Chip, Typography, Button, Card, CardActions, CardContent, CardMedia } from '@mui/material';
 
-export default function PortfolioCard({ id, title, description, tags, onClick }) {
+export default function PortfolioCard2({ id, title, description, tags, onClick }) {
   return (
     <Card sx={{ maxWidth: 345, backgroundColor: 'rgba(255, 255, 255, 0.75)' }}>
       <CardMedia
@@ -31,7 +31,7 @@ export default function PortfolioCard({ id, title, description, tags, onClick })
   );
 }
 
-PortfolioCard.propTypes = {
+PortfolioCard2.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

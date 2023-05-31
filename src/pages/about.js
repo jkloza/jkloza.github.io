@@ -15,7 +15,7 @@ export default function About() {
       <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
         <ProfileImageContainer />
       </Grid>
-      <Grid item xs={6} md={4}>
+      <Grid item xs={6} md={5}>
         <div style={headingStyles}>
           <Typography variant="h2" color="primary" sx={{ fontWeight: 700 }}>
             it’s me! hi! 🤸‍♀️
@@ -42,7 +42,7 @@ export default function About() {
         <br />
         <ThickDivider />
       </Grid>
-      <Grid item xs={0} md={2}></Grid>
+      <Grid item xs={0} md={1}></Grid>
     </Grid>
   );
 }

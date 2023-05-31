@@ -3,7 +3,7 @@
   /* Refers to the name of your @keyframes element below */
   animation-duration: 2.5s;
   /* Change to speed up or slow down */
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
   /* Never stop waving :) */
   transform-origin: 70% 70%;
   /* Pivot around the bottom-left palm */

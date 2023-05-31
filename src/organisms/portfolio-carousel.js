@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { projects } from '../data/portfolio';
-import PortfolioCard from '../molecules/portfolio-card';
+import PortfolioCard2 from '../molecules/portfolio-card-2';
 import { Grid } from '@mui/material';
 import ProjectModal from './project-modal';
 
@@ -21,7 +21,7 @@ export default function PortfolioCarousel() {
         {projects.map((project) => {
           return (
             <Grid item key={project.title} xs={10}>
-              <PortfolioCard
+              <PortfolioCard2
                 id={project.id}
                 title={project.title}
                 description={project.description}
