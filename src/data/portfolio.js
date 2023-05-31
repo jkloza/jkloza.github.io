@@ -1,23 +1,37 @@
+import calculator from '../assets/previews/calculator.png';
+import dataVis from '../assets/previews/data-vis.png';
 export const projects = [
   {
     id: 'recharts-data',
-    title: 'Recharts Data Visualization',
+    title: 'recharts data visualization',
+    preview: {
+      img: dataVis,
+      alt: 'Graph'
+    },
     description:
-      'Data visualization tool built with React library called Recharts - users can create and edit analyses of different combinations of analog and digital sensors in their farms.',
+      'farmhand users can create, edit, save, and remove analyses of their farm’s analog and digital sensors. allows users to gain valuable insight into how their farms are running',
     tags: ['Frontend', 'Backend', 'ReactJS']
   },
   {
     id: 'tasks',
-    title: 'Task Management System',
+    title: 'task management system',
+    preview: {
+      img: calculator,
+      alt: 'Select crops'
+    },
     description:
-      'Data visualization tool built with React library called Recharts - users can create and edit analyses of different combinations of analog and digital sensors in their farms.',
+      'data visualization tool built with react library called recharts - users can create and edit analyses of different combinations of analog and digital sensors in their farms',
     tags: ['Frontend', 'Backend', 'ReactJS']
   },
   {
     id: 'investment-calc',
-    title: 'Investment Calculator',
+    title: 'investment calculator',
+    preview: {
+      img: calculator,
+      alt: 'Select crops'
+    },
     description:
-      'This tool takes given data around projected yield, crop pricing, and labor and supply costs, and provides investment information on a Freight Farm.',
+      'this tool takes given data around projected yield, crop pricing, and labor and supply costs, and provides an estimate for investment return on a Freight Farm',
     tags: ['Frontend', 'HTML/CSS', 'Javascript']
   }
 ];

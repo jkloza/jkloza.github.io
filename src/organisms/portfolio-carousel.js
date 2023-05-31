@@ -17,22 +17,43 @@ export default function PortfolioCarousel() {
   };
   return (
     <>
-      <Grid container sx={{ marginLeft: 10 }} spacing={10}>
+      <Grid container direction="column" spacing={3}>
         {projects.map((project) => {
+          const { id, title, description, tags, preview } = project;
           return (
-            <Grid item key={project.title} xs={10}>
-              <PortfolioCard2
-                id={project.id}
-                title={project.title}
-                description={project.description}
-                tags={project.tags}
-                onClick={handleOpenProject}
-              />
-            </Grid>
+            <PortfolioCard2
+              id={id}
+              title={title}
+              key={title}
+              preview={preview}
+              description={description}
+              tags={tags}
+              onClick={handleOpenProject}
+            />
           );
         })}
       </Grid>
       {openProject && <ProjectModal project={project} handleClose={handleCloseProject} />}
     </>
   );
+  // return (
+  //   <>
+  //     <Grid container sx={{ marginLeft: 10 }} spacing={10}>
+  //       {projects.map((project) => {
+  //         return (
+  //           <Grid item key={project.title} xs={10}>
+  //             <PortfolioCard2
+  //               id={project.id}
+  //               title={project.title}
+  //               description={project.description}
+  //               tags={project.tags}
+  //               onClick={handleOpenProject}
+  //             />
+  //           </Grid>
+  //         );
+  //       })}
+  //     </Grid>
+  //     {openProject && <ProjectModal project={project} handleClose={handleCloseProject} />}
+  //   </>
+  // );
 }
