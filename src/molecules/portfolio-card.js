@@ -6,7 +6,7 @@ export default function PortfolioCard({ id, title, preview, description, tags, o
   return (
     <Grid item container direction="row" onClick={onClick} className="radio-btns__btn">
       <Grid item xs={4}>
-        <img src={preview.img} alt={preview.alt} />
+        <img className="radio-btns__btn__img" src={preview.img} alt={preview.alt} />
       </Grid>
       <Grid item xs={8} container spacing={2} direction="column">
         <Grid item>

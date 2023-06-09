@@ -30,11 +30,10 @@
   transition: .3s;
 }
 
-.radio-btns__btn {
-  margin-top: 10;
-  --g: 4px;
+.radio-btns__btn__img {
+  --g: 3px;
   /* the gap */
-  --b: 4px;
+  --b: 3px;
   /* border thickness*/
   --c: #007FFF;
   /* the color */

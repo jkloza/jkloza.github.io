@@ -18,7 +18,7 @@ export default function PortfolioCarousel() {
   };
   return (
     <>
-      <Grid container spacing={2} className="radio-btns">
+      <Grid container direction="column" spacing={4} className="radio-btns">
         {projects.map((project) => {
           const { id, title, description, tags, preview } = project;
           return (
