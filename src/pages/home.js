@@ -12,8 +12,12 @@ const headingStyles = {
 // TODO: Get actual height of page and not a guess!
 export default function Home() {
   return (
-    <Grid container justifyContent="center" style={{ marginTop: '2%' }}>
-      <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
+    <Grid container justifyContent="center">
+      <Grid
+        item
+        xs={12}
+        md={6}
+        style={{ display: 'flex', justifyContent: 'center', marginBottom: '10%' }}>
         <ProfileImageContainer />
       </Grid>
       <Grid item xs={6} md={4}>

@@ -71,9 +71,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## to do:
 1. update readme
-2. fix color background
-3. fix tab routing (refresh + responsive issue)
-4. portfolio cards + modals
+2. fix tab routing (refresh + responsive issue)
+3. portfolio cards responsiveness
+4. portfolio modal image center/align to center
+5. portfolio modal not scrolling
 
 ## give credit to:
 - hand emoji : https://codepen.io/jakejarvis/pen/pBZWZw

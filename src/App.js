@@ -27,25 +27,23 @@ function App() {
     <ThemeModeContext.Provider value={{ colorMode, mode }}>
       <ThemeProvider theme={theme}>
         <Router>
-          <div>
-            <nav>
-              <ResponsiveAppBar />
-            </nav>
-            <Grid
-              container
-              justifyContent="center"
-              sx={{
-                display: 'flex',
-                width: '100%',
-                alignItems: 'center',
-                justifyContent: 'center',
-                bgcolor: 'background.default',
-                color: 'text.primary',
-                p: 3
-              }}>
-              <PageRoutes />
-            </Grid>
-          </div>
+          <nav>
+            <ResponsiveAppBar />
+          </nav>
+          <Grid
+            container
+            justifyContent="center"
+            sx={{
+              display: 'flex',
+              width: '100%',
+              alignItems: 'center',
+              justifyContent: 'center',
+              bgcolor: 'background.default',
+              color: 'text.primary',
+              height: '95vh'
+            }}>
+            <PageRoutes />
+          </Grid>
         </Router>
       </ThemeProvider>
     </ThemeModeContext.Provider>
