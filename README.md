@@ -74,7 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 2. fix tab routing (refresh + responsive issue)
 3. portfolio cards responsiveness
 4. portfolio modal image center/align to center
-5. portfolio modal not scrolling
 6. image sharpness
 7. responsive nav bar
 

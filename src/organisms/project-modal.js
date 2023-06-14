@@ -1,45 +1,41 @@
 import { PropTypes } from 'prop-types';
-import { Typography, Dialog } from '@mui/material';
+import { Typography, Dialog, Grid } from '@mui/material';
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CloseIcon from '@mui/icons-material/Close';
 import { projects } from '../data/portfolio';
 import Carousel from 'react-material-ui-carousel';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
-const ExpandMore = styled((props) => {
-  const { ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest
-  })
-}));
-
 export default function ProjectModal({ project, handleClose }) {
   const style = {
-    bgcolor: 'background.paper',
+    bgcolor: 'background.default',
     boxShadow: 24,
     overflow: 'scroll'
   };
-  const [expanded, setExpanded] = React.useState(true);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   const currentProject = projects.find((p) => p.id === project);
-  console.log(currentProject);
+
+  const getProjectDetails = () => {
+    return currentProject.details.map((project) => {
+      return (
+        <Grid item key={project.content}>
+          {project.header && (
+            <Typography variant="body1" sx={{ fontWeight: '700' }}>
+              {project.header}
+            </Typography>
+          )}
+          <Typography variant="body1" align="justify">
+            {project.content}
+          </Typography>
+        </Grid>
+      );
+    });
+  };
 
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="lg">
@@ -73,48 +69,20 @@ export default function ProjectModal({ project, handleClose }) {
               />
             ))}
           </Carousel>
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              This impressive paella is a perfect party dish and a fun meal to cook together with
-              your guests. Add 1 cup of frozen peas along with the mussels, if you like.
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            {currentProject.demoLink && (
+          {currentProject.demoLink && (
+            <CardActions disableSpacing>
               <a href={currentProject.demoLink} target="_blank" rel="noreferrer">
                 <IconButton aria-label="view">
                   <VisibilityIcon />
                 </IconButton>
               </a>
-            )}
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-            <ExpandMore
-              expand={expanded}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more">
-              <ExpandMoreIcon />
-            </ExpandMore>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph>Method:</Typography>
-              <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-                minutes.
-              </Typography>
-              <Typography paragraph>
-                Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-                heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-                browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving
-                chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion,
-                salt and pepper, and cook, stirring often until thickened and fragrant, about 10
-                minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-              </Typography>
-            </CardContent>
-          </Collapse>
+            </CardActions>
+          )}
+          <CardContent sx={{ marginLeft: 10, marginRight: 10 }}>
+            <Grid container spacing={1}>
+              {currentProject.details?.length && getProjectDetails()}
+            </Grid>
+          </CardContent>
         </div>
       </Card>
     </Dialog>
