@@ -72,9 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## to do:
 1. update readme
 2. fix tab routing (refresh + responsive issue)
-3. portfolio cards responsiveness
-4. portfolio modal image center/align to center
-6. image sharpness
+3. responsive portfolio cards
+4. add more info to projects in portfolio
+5. add link to download resume
+6. update about me
 7. responsive nav bar
 
 ## give credit to:
