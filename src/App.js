@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from '@mui/material';
 import { getDesignTokens } from './mui/theme';
 import { Grid } from '@mui/material';
 import { ThemeModeContext } from './context';
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
   const [mode, setMode] = useState('dark');
@@ -26,6 +27,7 @@ function App() {
   return (
     <ThemeModeContext.Provider value={{ colorMode, mode }}>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Router>
           <nav>
             <ResponsiveAppBar />
@@ -38,9 +40,7 @@ function App() {
               width: '100%',
               alignItems: 'center',
               justifyContent: 'center',
-              bgcolor: 'background.default',
-              color: 'text.primary',
-              height: '95vh'
+              color: 'text.primary'
             }}>
             <PageRoutes />
           </Grid>

@@ -12,7 +12,7 @@ const headingStyles = {
 // TODO: Get actual height of page and not a guess!
 export default function Home() {
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" sx={{ marginTop: '5%' }}>
       <Grid
         item
         xs={12}

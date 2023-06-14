@@ -8,16 +8,16 @@ export default function PortfolioCard({ id, title, preview, description, tags, o
   }
   return (
     <Grid item container direction="row" onClick={handleClick} className="radio-btns__btn">
-      <Grid item xs={4}>
+      <Grid item xs={5}>
         <img
           className="radio-btns__btn__img"
           src={preview.img}
           alt={preview.alt}
-          height="200"
-          width="200"
+          height="250"
+          width="350"
         />
       </Grid>
-      <Grid item xs={8} container spacing={2} direction="column">
+      <Grid item xs={7} container spacing={2} direction="column">
         <Grid item>
           <Typography variant="h5" color="primary" sx={{ fontWeight: 700 }}>
             {title}

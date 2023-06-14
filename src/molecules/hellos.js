@@ -4,7 +4,7 @@ import './hellos.css';
 
 export default function HelloComponent() {
   return (
-    <Typography variant="h2" color="primary" sx={{ fontWeight: 700 }}>
+    <Typography data-testid="hello" variant="h2" color="primary" sx={{ fontWeight: 700 }}>
       {getHello()}! <span id="hand-emoji">👋</span>
     </Typography>
   );
