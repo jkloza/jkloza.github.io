@@ -1,7 +1,6 @@
-import dataVis from '../assets/previews/data-vis.png';
-import crops from '../assets/previews/crops.png';
-import cropProd from '../assets/previews/cropProd.png';
 import {
+  fullGraph,
+  crops,
   form1,
   form2,
   tasks,
@@ -10,6 +9,7 @@ import {
   form,
   datepicker,
   prod,
+  cropProd,
   calculator,
   home,
   figma
@@ -21,10 +21,10 @@ export const projects = [
     title: 'recharts data visualization',
     createdFor: 'freight farms',
     preview: {
-      img: dataVis,
+      img: fullGraph,
       alt: 'Graph'
     },
-    imgs: [dataVis, form1, form2],
+    imgs: [fullGraph, form1, form2],
     description:
       'farmhand users can create, edit, save, and remove analyses of their farm’s analog and digital sensors. allows users to gain valuable insight into how their farms are running',
     tags: ['Frontend', 'Backend', 'ReactJS']
