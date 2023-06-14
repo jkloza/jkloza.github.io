@@ -1,6 +1,5 @@
 import datepicker from './datepicker.png';
-import fullview from './full-view.png';
 import form from './form.png';
-import recurrency from './recurrency.png';
+import tasks from './tasks.png';
 
-export { datepicker, fullview, form, recurrency };
+export { datepicker, tasks, form };

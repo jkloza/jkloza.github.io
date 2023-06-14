@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types';
-import { Typography, Modal } from '@mui/material';
+import { Typography, Dialog } from '@mui/material';
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
@@ -28,14 +28,9 @@ const ExpandMore = styled((props) => {
 
 export default function ProjectModal({ project, handleClose }) {
   const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '75%',
     bgcolor: 'background.paper',
     boxShadow: 24,
-    maxHeight: '670px'
+    overflow: 'scroll'
   };
   const [expanded, setExpanded] = React.useState(true);
 
@@ -47,11 +42,7 @@ export default function ProjectModal({ project, handleClose }) {
   console.log(currentProject);
 
   return (
-    <Modal
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="modal-modal-title"
-      aria-describedby="modal-modal-description">
+    <Dialog open={open} onClose={handleClose} maxWidth="lg">
       <Card sx={style}>
         <CardHeader
           action={
@@ -61,7 +52,7 @@ export default function ProjectModal({ project, handleClose }) {
           }
           title={currentProject.title}
           titleTypographyProps={{ fontWeight: 700, textAlign: 'center', color: 'white' }}
-          subheader="freight farms"
+          subheader={currentProject.createdFor}
           subheaderTypographyProps={{ textAlign: 'center', color: 'white' }}
           sx={{ backgroundColor: 'primary.main' }}
         />
@@ -126,7 +117,7 @@ export default function ProjectModal({ project, handleClose }) {
           </Collapse>
         </div>
       </Card>
-    </Modal>
+    </Dialog>
   );
 }
 

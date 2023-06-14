@@ -1,26 +1,25 @@
-import calculator from '../assets/previews/calculator.png';
 import dataVis from '../assets/previews/data-vis.png';
-import taskPreview from '../assets/previews/tasks.png';
-import portf from '../assets/previews/portf.png';
 import crops from '../assets/previews/crops.png';
 import cropProd from '../assets/previews/cropProd.png';
 import {
   form1,
   form2,
-  fullAnalysis,
+  tasks,
   step1,
   step4,
-  fullview,
-  recurrency,
   form,
   datepicker,
-  prod
+  prod,
+  calculator,
+  home,
+  figma
 } from '../assets/imgs';
 
 export const projects = [
   {
     id: 'recharts-data',
     title: 'recharts data visualization',
+    createdFor: 'freight farms',
     preview: {
       img: dataVis,
       alt: 'Graph'
@@ -33,23 +32,25 @@ export const projects = [
   {
     id: 'tasks',
     title: 'task management system',
+    createdFor: 'freight farms',
     preview: {
-      img: taskPreview,
+      img: tasks,
       alt: 'Select crops'
     },
-    imgs: [taskPreview, form, datepicker, recurrency],
+    imgs: [tasks, form, datepicker],
     description:
-      'data visualization tool built with react library called recharts - users can create and edit analyses of different combinations of analog and digital sensors in their farms',
+      'task management system that allows users to create and assign tasks to various members of their organization. users can customize the title, descriptions, assignee, due date, and recurrence of their tasks. ',
     tags: ['Frontend', 'Backend', 'ReactJS']
   },
   {
     id: 'investment-calc',
     title: 'investment calculator',
+    createdFor: 'freight farms',
     preview: {
       img: calculator,
       alt: 'Select crops'
     },
-    imgs: [calculator, step4],
+    imgs: [calculator, step1, step4],
     demoLink: 'https://www.freightfarms.com/investment-calculator',
     description:
       'this tool takes given data around projected yield, crop pricing, and labor and supply costs, and provides an estimate for investment return on a Freight Farm',
@@ -58,11 +59,12 @@ export const projects = [
   {
     id: 'portfolio',
     title: 'portfolio website',
+    createdFor: 'personal project',
     preview: {
-      img: portf,
+      img: home,
       alt: 'website'
     },
-    imgs: [portf, step4],
+    imgs: [home, figma],
     demoLink: 'https://www.freightfarms.com/investment-calculator',
     description:
       'first designed using Figma, this website was bootstrapped using Create React App and built with MaterialUI design principles in mind',
@@ -71,6 +73,7 @@ export const projects = [
   {
     id: 'crops',
     title: 'crop planning tool',
+    createdFor: 'freight farms',
     preview: {
       img: crops,
       alt: 'website'
@@ -84,6 +87,7 @@ export const projects = [
   {
     id: 'production',
     title: 'crop production log',
+    createdFor: 'freight farms',
     preview: {
       img: cropProd,
       alt: 'crop production'
