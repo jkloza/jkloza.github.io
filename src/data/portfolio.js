@@ -81,9 +81,19 @@ export const projects = [
       alt: 'Select crops'
     },
     imgs: [calculator, step1, step4],
-    demoLink: 'https://www.freightfarms.com/investment-calculator',
     description:
       'this tool takes given data around projected yield, crop pricing, and labor and supply costs, and provides an estimate for investment return on a Freight Farm',
+    details: [
+      {
+        content:
+          'This project was built in collaboration with a marketing and crop science team. Data was given from the crop science team around different crop yields, energy usage data, and growing supply costs. I built the calculations given that data and user inputs involving crop pricing, labor usage,  energy usage, and upfront cost to provide a simple analysis tool on the payback time period for an investment of a Freight Farm. '
+      },
+      {
+        content:
+          'This tool was written using HTML/CSS and Javascript, and was deployed within a code injection block on Squarespace. ',
+        link: { label: 'Live Demo', src: 'https://www.freightfarms.com/investment-calculator' }
+      }
+    ],
     tags: ['Frontend', 'HTML/CSS', 'Javascript']
   },
   {
@@ -98,6 +108,16 @@ export const projects = [
     demoLink: 'https://www.freightfarms.com/investment-calculator',
     description:
       'first designed using Figma, this website was bootstrapped using Create React App and built with MaterialUI design principles in mind',
+    details: [
+      {
+        content:
+          'You are probably viewing the live demo right now! Created using ReactJS, bootstrapped with create-react-app. Utilizes MaterialUI component library and deployed via GitHub. Designed myself using a product design tool called Figma, and I had a couple iterations for how I wanted it to look. I was able to play with a few design-oriented things, such as light and dark mode, color palettes, front-end animation in CSS, and responsive strategies.'
+      },
+      {
+        content:
+          'I implemented testing using Jest and React Testing Library. I am running snapshot tests on specific pages, as well as unit tests. I also utilized atomic design principles for file structure/organization.'
+      }
+    ],
     tags: ['ReactJS', 'HTML/CSS', 'Material-UI']
   },
   {
