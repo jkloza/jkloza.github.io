@@ -1,23 +1,25 @@
 import HelloComponent from '../molecules/hellos';
 import ProfileImageContainer from '../organisms/profile-image-container';
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { ThickDivider } from '../atoms/divider';
 
-// Styles
-const headingStyles = {
-  marginTop: '25%',
-  marginBottom: 30
-};
-
-// TODO: Get actual height of page and not a guess!
 export default function Home() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  // Styles
+  const headingStyles = {
+    marginTop: matches ? '25%' : '0',
+    marginBottom: 30
+  };
+
   return (
     <Grid container justifyContent="center" sx={{ marginTop: '5%' }}>
       <Grid
         item
         xs={12}
         md={6}
-        style={{ display: 'flex', justifyContent: 'center', marginBottom: '10%' }}>
+        style={{ display: 'flex', justifyContent: 'center', marginBottom: matches ? '10%' : '5%' }}>
         <ProfileImageContainer />
       </Grid>
       <Grid item xs={6} md={4}>

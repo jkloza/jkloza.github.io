@@ -1,6 +1,6 @@
 import { Box, Tabs, Tab } from '@mui/material';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export function NavMenu() {
   const pages = [
@@ -8,7 +8,16 @@ export function NavMenu() {
     { label: 'About', link: '/about' },
     { label: 'Portfolio', link: '/portfolio' }
   ];
-  const [value, setValue] = useState(0);
+
+  const { pathname } = useLocation();
+
+  let path = 0;
+  pages.forEach((page, i) => {
+    if (pathname === page.link) {
+      path = i;
+    }
+  });
+  const [value, setValue] = useState(path);
   const handleTabChange = (e, newVal) => setValue(newVal);
 
   return (

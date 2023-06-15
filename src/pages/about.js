@@ -1,21 +1,22 @@
-import { Typography, Grid } from '@mui/material';
+import { Typography, Grid, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import { ThickDivider } from '../atoms/divider';
 import ProfileImageContainer from '../organisms/profile-image-container';
 
-// Styles
-const headingStyles = {
-  marginTop: '10%',
-  marginBottom: 30
-};
-
 export default function About() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  const headingStyles = {
+    marginTop: matches ? '10%' : '0',
+    marginBottom: 30
+  };
   return (
     <Grid container justifyContent="center" sx={{ marginTop: '5%' }}>
       <Grid
         item
         xs={12}
         md={6}
-        style={{ display: 'flex', justifyContent: 'center', marginBottom: '10%' }}>
+        style={{ display: 'flex', justifyContent: 'center', marginBottom: matches ? '10%' : '5%' }}>
         <ProfileImageContainer />
       </Grid>
       <Grid item xs={6} md={5}>
