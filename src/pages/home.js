@@ -1,8 +1,9 @@
 import HelloComponent from '../molecules/hellos';
 import ProfileImageContainer from '../organisms/profile-image-container';
-import { Typography, Grid, useMediaQuery } from '@mui/material';
+import { Typography, Grid, useMediaQuery, Button } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { ThickDivider } from '../atoms/divider';
+import pdf from '../data/resume.pdf';
 
 export default function Home() {
   const theme = useTheme();
@@ -35,6 +36,12 @@ export default function Home() {
         </Typography>
         <br />
         <ThickDivider />
+        <br />
+        <Grid item xs={12}>
+          <a href={pdf} target="blank">
+            <Button variant="contained">View My Resume</Button>
+          </a>
+        </Grid>
       </Grid>
       <Grid item xs={0} md={2}></Grid>
     </Grid>

@@ -71,12 +71,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## to do:
 1. update readme
-2. fix tab routing (refresh + responsive issue)
-3. responsive portfolio cards
-4. add more info to projects in portfolio
-5. add link to download resume
+2. center projects on mobile view
+3. update tags for projects
+4. keep adding more info to projects in portfolio
+5. change react logo in tab to something else (me?)
 6. update about me
-7. responsive nav bar
 
 ## give credit to:
 - hand emoji : https://codepen.io/jakejarvis/pen/pBZWZw
