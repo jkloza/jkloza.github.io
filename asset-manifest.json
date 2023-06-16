@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.19b6094c.css",
+    "main.js": "/static/js/main.007fb9a2.js",
+    "static/js/787.318c1d60.chunk.js": "/static/js/787.318c1d60.chunk.js",
+    "static/media/calculator.png": "/static/media/calculator.1f79ee50cf24cb399a38.png",
+    "static/media/faceid.png": "/static/media/faceid.8bc3b294765b2a209573.png",
+    "static/media/figma.png": "/static/media/figma.83b4929c9dddcca61073.png",
+    "static/media/home.png": "/static/media/home.d16353e2a410c91c4a17.png",
+    "static/media/mobile-home.png": "/static/media/mobile-home.0d0ac42ad0c4d77563e9.png",
+    "static/media/mobile-tasks.png": "/static/media/mobile-tasks.0d0ac42ad0c4d77563e9.png",
+    "static/media/crops.png": "/static/media/crops.d261bbff618010d09823.png",
+    "static/media/full-graph.png": "/static/media/full-graph.052aab0500e6e42edd17.png",
+    "static/media/step-1.png": "/static/media/step-1.12af7c36f874acb19b33.png",
+    "static/media/prod.png": "/static/media/prod.00d051fec85df05b8eaf.png",
+    "static/media/tasks.png": "/static/media/tasks.e3b2ef01c714d7f2b803.png",
+    "static/media/datepicker.png": "/static/media/datepicker.15c0974a60caaf8d5fe9.png",
+    "static/media/form.png": "/static/media/form.cf357d3a0b63add8c78e.png",
+    "static/media/cropProd.png": "/static/media/cropProd.023e87a7a2d05a3a3f4f.png",
+    "static/media/form-2.png": "/static/media/form-2.0867f90ff5b5c02a77a2.png",
+    "static/media/step-4.png": "/static/media/step-4.768e142725275bd2bd2e.png",
+    "static/media/form-1.png": "/static/media/form-1.be7c2790b6010658eda6.png",
+    "static/media/juli-fun.png": "/static/media/juli-fun.557806eb7d6c840f3a6b.png",
+    "static/media/juli-1.png": "/static/media/juli-1.f802cbfd2e2eb6d29d9d.png",
+    "static/media/resume.pdf": "/static/media/resume.eb022ce83ce4eb321f71.pdf",
+    "index.html": "/index.html",
+    "main.19b6094c.css.map": "/static/css/main.19b6094c.css.map",
+    "main.007fb9a2.js.map": "/static/js/main.007fb9a2.js.map",
+    "787.318c1d60.chunk.js.map": "/static/js/787.318c1d60.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19b6094c.css",
+    "static/js/main.007fb9a2.js"
+  ]
+}
