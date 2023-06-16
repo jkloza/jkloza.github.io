@@ -28,7 +28,7 @@ export default function Home() {
           <HelloComponent />
         </div>
         <Typography variant="h5" color="text.primary" sx={{ fontWeight: 700 }}>
-          i’m juli, a{' '}
+          i&#39;m juli, a{' '}
           <Typography component="span" variant="h5" sx={{ fontWeight: 700 }} color="primary">
             full-stack developer
           </Typography>{' '}

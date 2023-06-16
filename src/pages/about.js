@@ -38,8 +38,8 @@ export default function About() {
           </li>
           <li>
             <Typography variant="h5" color="text.primary" sx={{ fontWeight: 700 }}>
-              self-proclaimed hobby girlie. i am a dabbler. hobbies i’ve started over the years:
-              gardening, reading, hiking, knitting, sourdough, ukelele
+              when i&#39;m not working, i&#39;m dabbling in all kinds of hobbies: gardening,
+              reading, hiking, knitting, playing ultimate frisbee!
             </Typography>
           </li>
         </ul>

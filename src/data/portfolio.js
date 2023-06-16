@@ -12,7 +12,10 @@ import {
   cropProd,
   calculator,
   home,
-  figma
+  figma,
+  mobileHome,
+  mobileTasks,
+  faceId
 } from '../assets/imgs';
 
 export const projects = [
@@ -27,6 +30,27 @@ export const projects = [
     imgs: [fullGraph, form1, form2],
     description:
       'farmhand users can create, edit, save, and remove analyses of their farm’s analog and digital sensors. allows users to gain valuable insight into how their farms are running',
+    details: [
+      {
+        content:
+          'Data visualization tool built with React library called Recharts - users can create and edit analyses of different combinations of analog and digital sensors in their farms. Allows users to gain insight into their farms and understand trends in the environmental conditions within the farm, and also see at a glance that everything is running smoothly.'
+      },
+      {
+        header: 'Data Pagination',
+        content:
+          'This project includes retrieving a high volume of sensor data from AWS DynamoDB and formatting that data into something the graph component expects. Given the sensors in the analysis, we map through them and for each request, construct a promise to retrieve the data. Promise.all() allowed these to all run in parallel, assisting with load time. The request was built with a Dynamo query function. Since there is a 15MB limit on data coming back from each dynamo request, on success of each promise, we check for a LastEvaluatedKey (key given as a response in the Dynamo query), and use that to paginate the rest of the data.'
+      },
+      {
+        header: 'Data Formatting',
+        content:
+          'A special formatting utility was needed in order to view the data as a Recharts component expects it. The returned structure from Dynamo was an array of arrays, each with a timestamp and the given data. These arrays needed to be merged into one according to their timestamps, with each sensor’s data as a key in the object of each array. '
+      },
+      {
+        header: 'Data Downsampling',
+        content:
+          'Given the sensor IDs and a date and time range, I needed to determine if the data should be downsampled to help with load time and data simplification. A state packet with farm data comes in around every 10 seconds. The default date range for an analysis is 12 hours. With a single sensor, this gives us 4,320 data points. '
+      }
+    ],
     tags: ['Frontend', 'Backend', 'ReactJS']
   },
   {
@@ -71,6 +95,26 @@ export const projects = [
       }
     ],
     tags: ['Frontend', 'Backend', 'ReactJS']
+  },
+  {
+    id: 'mobile',
+    title: 'biometric login',
+    createdFor: 'freight farms',
+    preview: {
+      img: faceId,
+      alt: 'mobile app'
+    },
+    imgs: [faceId, mobileHome, mobileTasks],
+    imgResize: true,
+    description:
+      'this feature was built for iOS and Android apps using React package React Native Biometrics.',
+    details: [
+      {
+        content:
+          'This feature was implementing biometrics to our React Native mobile apps. The app was built by contractors but is actively maintained by myself and another developer. This feature was added to make login easier for our users.'
+      }
+    ],
+    tags: ['React Native', 'iOS', 'Android']
   },
   {
     id: 'investment-calc',
@@ -130,6 +174,7 @@ export const projects = [
     },
     imgs: [crops, step4],
     demoLink: 'https://www.freightfarms.com/investment-calculator',
+    details: [],
     description:
       'first designed using Figma, this website was bootstrapped using Create React App and built with MaterialUI design principles in mind',
     tags: ['ReactJS', 'HTML/CSS', 'Material-UI']
@@ -144,6 +189,7 @@ export const projects = [
     },
     imgs: [cropProd, prod],
     demoLink: 'https://www.freightfarms.com/investment-calculator',
+    details: [],
     description:
       'first designed using Figma, this website was bootstrapped using Create React App and built with MaterialUI design principles in mind',
     tags: ['ReactJS', 'HTML/CSS', 'Material-UI']

@@ -6,6 +6,7 @@ export default function PortfolioCard({ id, title, preview, description, tags, o
   function handleClick() {
     onClick(id);
   }
+
   return (
     <Grid
       item
@@ -50,5 +51,6 @@ PortfolioCard.propTypes = {
   preview: PropTypes.any,
   description: PropTypes.string.isRequired,
   tags: PropTypes.array,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  imgResize: PropTypes.bool
 };
