@@ -14,6 +14,8 @@ export default function Home() {
     marginBottom: 30
   };
 
+  console.log('Thanks for visting :)');
+
   return (
     <Grid container justifyContent="center" sx={{ marginTop: '5%' }}>
       <Grid
