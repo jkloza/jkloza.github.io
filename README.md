@@ -1,10 +1,19 @@
-## to do:
-1. update readme
-2. center projects on mobile view
-3. update tags for projects
-4. keep adding more info to projects in portfolio
-5. update about me
+<div align="center">
+    <a href="https://github.com/jkloza" target="_blank">
+        <img src="https://github.com/jkloza/kloza-port/blob/3178fea9441eb402a073a87336f17318c4ef321e/public/jk_logo.png" 
+        alt="Logo" width="290" height="290">
+    </a>
+</div>
 
-## credit to:
-- hand emoji : https://codepen.io/jakejarvis/pen/pBZWZw
-- inspirations: https://braydentw.io/ , https://brittanychiang.com/#projects (helped to ideate! ty!)
+## Hey, I'm Juli!
+
+### Deployment
+
+Future reference for myself
+
+### Acknowledgments
+
+Inspiration, code snippets, etc.
+* [hand-emoji](https://codepen.io/jakejarvis/pen/pBZWZw)
+* [Brayden Wright](https://braydentw.io/)
+* [Brittany Chiang](https://brittanychiang.com/#projects)
