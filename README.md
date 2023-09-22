@@ -7,10 +7,6 @@
 
 ## Hey, I'm Juli!
 
-### Deployment
-
-Future reference for myself
-
 ### Acknowledgments
 
 Inspiration, code snippets, etc.
