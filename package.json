@@ -1,7 +1,7 @@
 {
   "name": "latest-juli-site",
   "version": "0.1.0",
-  "homepage": "https://jkloza.github.io/",
+  "homepage": "https://julikloza.com/",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
