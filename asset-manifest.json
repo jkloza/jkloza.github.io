@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.19b6094c.css",
-    "main.js": "/static/js/main.f5cce090.js",
+    "main.js": "/static/js/main.75360ff3.js",
     "static/js/787.318c1d60.chunk.js": "/static/js/787.318c1d60.chunk.js",
     "static/media/calculator.png": "/static/media/calculator.1f79ee50cf24cb399a38.png",
     "static/media/faceid.png": "/static/media/faceid.8bc3b294765b2a209573.png",
@@ -22,14 +22,14 @@
     "static/media/form-1.png": "/static/media/form-1.be7c2790b6010658eda6.png",
     "static/media/juli-fun.png": "/static/media/juli-fun.557806eb7d6c840f3a6b.png",
     "static/media/juli-1.png": "/static/media/juli-1.f802cbfd2e2eb6d29d9d.png",
-    "static/media/resume.pdf": "/static/media/resume.eb022ce83ce4eb321f71.pdf",
+    "static/media/resume.pdf": "/static/media/resume.c8d058b9a271ffd29d02.pdf",
     "index.html": "/index.html",
     "main.19b6094c.css.map": "/static/css/main.19b6094c.css.map",
-    "main.f5cce090.js.map": "/static/js/main.f5cce090.js.map",
+    "main.75360ff3.js.map": "/static/js/main.75360ff3.js.map",
     "787.318c1d60.chunk.js.map": "/static/js/787.318c1d60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19b6094c.css",
-    "static/js/main.f5cce090.js"
+    "static/js/main.75360ff3.js"
   ]
 }
