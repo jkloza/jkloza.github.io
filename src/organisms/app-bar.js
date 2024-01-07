@@ -13,6 +13,7 @@ import {
   Divider,
   IconButton
 } from '@mui/material';
+import { pages } from '../data';
 import { NavMenu } from '../navigation/nav-menu';
 import { Link } from 'react-router-dom';
 import LightDarkToggle from '../molecules/light-dark-toggle';
@@ -26,11 +27,6 @@ const ResponsiveAppBar = () => {
   };
 
   const drawerWidth = 240;
-  const pages = [
-    { label: 'Home', link: '/' },
-    { label: 'About', link: '/about' },
-    { label: 'Portfolio', link: '/portfolio' }
-  ];
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor: 'background.default' }}>
       <Divider />

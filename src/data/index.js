@@ -12,4 +12,11 @@ const HELLOS = [
   'greetings'
 ];
 
-export { projects, HELLOS };
+const pages = [
+  { label: 'Home', link: '/' },
+  { label: 'About', link: '/about' },
+  { label: 'Portfolio', link: '/portfolio' }
+  // { label: 'Fun Stuff', link: '/fun-stuff' }
+];
+
+export { projects, HELLOS, pages };

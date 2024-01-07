@@ -1,14 +1,9 @@
 import { Box, Tabs, Tab } from '@mui/material';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { pages } from '../data';
 
 export function NavMenu() {
-  const pages = [
-    { label: 'Home', link: '/' },
-    { label: 'About', link: '/about' },
-    { label: 'Portfolio', link: '/portfolio' }
-  ];
-
   const { pathname } = useLocation();
 
   let path = 0;
